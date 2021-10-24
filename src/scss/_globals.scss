@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+//	font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+	font-size: 14px;
+	color: #000000;
+
+	@include breakpoint-up(large) {
+		font-size: 16px;
+	}
+}
+
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+	color: #000000;
+
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+
+	&-sb {
+		justify-content: space-between;
+	}
+
+	&-sa {
+		justify-content: space-around;
+	}
+
+	&-c {
+		justify-content: center;
+	}
+	
+	&-dc {
+		flex-direction: column;
+	}
+}
+
+.hide {
+	visibility: hidden;
+	//opacity: 0;
+	//display: none;
+}

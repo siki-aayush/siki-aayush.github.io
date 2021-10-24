@@ -1,0 +1,17 @@
+
+$breakpoint-up: ("large": "640px");
+$breakpoint-down: ("small": "639px");
+
+// Desktop
+@mixin breakpoint-up($size) {
+	@media (min-width: map-get($map: $breakpoint-up, $key: $size)) {
+		@content;
+	}
+}
+
+// Mobile
+@mixin breakpoint-down($size) {
+	@media (max-width: map-get($map: $breakpoint-down, $key: $size)) {
+		@content;
+	}
+}

@@ -1,0 +1,60 @@
+.home {
+	height: 92%;
+	padding: 30% 0 0 12%;
+	background-image: url("../images/edited_background.jpg");
+	background-repeat: no-repeat;
+	background-position: top left;
+
+	@include breakpoint-up(large) {
+		background-position: top right;
+		padding: 10% 0 0 15%;
+	}
+
+	// Intro title
+	&__intro {
+		font-family: 'Cormorant', serif;
+		font-size: 28px;
+
+		@include breakpoint-up(large) {
+			font-size: 70px;
+		}
+	}
+
+	// Social sites icons group
+	&__icons {
+		margin-top: 10px;
+
+		// Icons
+		a {
+			margin-right: 13px;
+
+			> svg {
+				width: 15px;
+				height: 15px;
+
+				@include breakpoint-up(large) {
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+
+		@include breakpoint-up(large) {
+			margin-top: 12px;
+		}
+	}
+
+	// About myself description
+	&__about {
+		font-size: 13px;
+		max-width: 270px;
+		margin-top: 15px;
+
+		@include breakpoint-up(large) {
+			font-size: 20px;
+			max-width: 715px;
+			margin-top: 30px
+		}
+	}
+}
+
