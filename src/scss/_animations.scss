@@ -1,0 +1,43 @@
+@keyframes move-down {
+	from {
+		visibility: hidden;
+		top: -15px;
+	}
+
+	1% {
+		visibility: visible;
+		top: -15px;
+	}
+
+	to {
+		visibility: visible;
+		top: 0px;
+	}
+}
+
+@keyframes move-up {
+	from {
+		visibility: visible;
+		top: 0px;
+	}
+
+	95% {
+		visibility: visible;
+		opacity: 5%;
+		top: -20px;
+	}
+
+	to {
+		visibility: hidden;
+		opacity: 0;
+		top: -20px;
+	}
+}
+
+.move-down {
+	animation: move-down 500ms;
+}
+
+.move-up {
+	animation: move-up 500ms;
+}
