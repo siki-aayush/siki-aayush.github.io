@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Page } from "../Interfaces";
 import NavLinks from "./NavLinks";
@@ -47,42 +47,40 @@ const Nav = () => {
     };
 
     return (
-        <header className="nav">
-            <div className="flex flex-sb">
-                <div className="nav__left">
-                    <a href="/">SikiAayush</a>
-                </div>
-                <div className="nav__webNav flex">
+        <header className="nav flex flex-ac flex-sb">
+            <div className="nav__left">
+                <a href="/">SikiAayush</a>
+            </div>
+            <div className="nav__webNav flex">
+                <NavLinks
+                    currentPage={currentPage}
+                    onPageChange={onPageChange}
+                />
+            </div>
+            <div className="nav__mobileNav">
+                {menu === true ? (
+                    <IoClose
+                        size={20}
+                        style={{ cursor: "pointer" }}
+                        onClick={onHamburgerBtnClose}
+                    />
+                ) : (
+                    <IoMenu
+                        size={20}
+                        style={{ cursor: "pointer" }}
+                        onClick={onHamburgerBtnOpen}
+                    />
+                )}
+
+                <div
+                    className={`nav__mobileNav__links flex flex-ac flex-dc ${
+                        menu ? "" : "hide"
+                    }`}
+                >
                     <NavLinks
                         currentPage={currentPage}
                         onPageChange={onPageChange}
                     />
-                </div>
-                <div className="nav__mobileNav">
-                    {menu === true ? (
-                        <IoClose
-                            size={20}
-                            style={{ cursor: "pointer" }}
-                            onClick={onHamburgerBtnClose}
-                        />
-                    ) : (
-                        <IoMenu
-                            size={20}
-                            style={{ cursor: "pointer" }}
-                            onClick={onHamburgerBtnOpen}
-                        />
-                    )}
-
-                    <div
-                        className={`nav__mobileNav__links flex flex-dc ${
-                            menu ? "" : "hide"
-                        }`}
-                    >
-                        <NavLinks
-                            currentPage={currentPage}
-                            onPageChange={onPageChange}
-                        />
-                    </div>
                 </div>
             </div>
         </header>

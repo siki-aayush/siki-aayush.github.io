@@ -2,14 +2,8 @@
 	width: 85%;
 	height: 8%;
 	font-family: 'Open Sans', sans-serif;
-	margin: auto;
-	padding-top: 15px;
 	position: relative;
-
-	// Desktop margin
-	//@include breakpoint-up(large) {
-		//padding-top: 35px;
-	//}
+	margin: auto;
 
 	// Left side cursive logo
 	&__left {
