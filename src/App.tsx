@@ -14,7 +14,7 @@ function App() {
             <div className="app" style={{ height: "100vh" }}>
                 <Nav />
                 <Route path="/about" render={About} />
-                <Route path="/projects" render={Projects} />
+                <Route path="/projects" component={Projects} />
                 <Route path="/" component={Home} exact />
             </div>
         </Router>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Page } from "../Interfaces";
 import NavLinks from "./NavLinks";

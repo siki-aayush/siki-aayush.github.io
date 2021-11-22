@@ -1,4 +1,3 @@
-//import { Icon } from "@iconify/react";
 import { FaLinkedinIn, FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Home = () => {
