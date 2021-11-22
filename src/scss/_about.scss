@@ -1,21 +1,21 @@
-
 .about {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 10px;
+	margin-top: 30px;
 
 	@include breakpoint-up(large) {
 		margin-top: 80px;
 		flex-direction: row;
 		align-items: unset;
 		justify-content: center;
+		margin: 80px 20px 20px 0px;
 	}
 
 	&__img {
-		width: 145px;
-		height: 200px;
-		background-color: $gray;
+		width: 150px;
+		height: 150px;
+		overflow: hidden;
 
 		@include breakpoint-up(large) {
 			width: 445px;
@@ -25,14 +25,26 @@
 		}
 
 		img {
-			width: 82%;
-			height: 88%;
-			margin: auto;
-			text-align: center;
+			width: 100%;
+			max-height: 100%;
+			border-radius: 50%;
+			object-fit: cover;
+
+			@include breakpoint-up(large) {
+				border-radius: 0%;
+
+			}
+
 		}
 	}
 
 	&__description {
+		margin: 0 30px;
+		text-align: justify;
+
+		@include breakpoint-up(large) {
+			margin: 0;
+		}
 
 		&__heading {
 			padding: 15px 0;
