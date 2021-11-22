@@ -19,20 +19,6 @@ const ProjectCard = ({ repo }: projectCardProps) => {
                 )}
             </div>
             <div className="projectCard__btn flex flex-ac">
-                {
-                    //<a
-                    //    href={repo.url}
-                    //    className="projectCard__btn__repo flex flex-ac flex-c"
-                    //>
-                    //    Repository
-                    //</a>
-                    //<a
-                    //    href="#"
-                    //    className="projectCard__btn__demo flex flex-ac flex-c"
-                    //>
-                    //    Demo Link
-                    //</a>
-                }
                 <button
                     //onClick={repo.url}
                     className="projectCard__btn__repo flex flex-ac flex-c"

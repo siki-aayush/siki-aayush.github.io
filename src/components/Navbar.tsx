@@ -4,15 +4,19 @@ import { Page } from "../Interfaces";
 import NavLinks from "./NavLinks";
 import { IoMenu, IoClose } from "react-icons/io5";
 
-const Nav = () => {
-    const [currentPage, setCurrentPage] = useState<Page>(Page.home);
+interface navProps {
+    currentPage: Page;
+    setCurrentPage: (page: Page) => void;
+}
+
+const Nav = ({ currentPage, setCurrentPage }: navProps) => {
     const [menu, setMenu] = useState<Boolean>(false);
 
     // Animation time -> 100 ms higher than scss animation time
     const ANIMATION_TIME = 500;
 
-    const onPageChange = (newPage: Page) => {
-        setCurrentPage(newPage);
+    const onPageChange = () => {
+        //setCurrentPage(newPage);
         menu && onHamburgerBtnClose();
     };
 
