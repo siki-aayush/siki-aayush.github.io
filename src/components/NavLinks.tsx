@@ -4,7 +4,7 @@ import { Page } from "../Interfaces";
 
 interface navProps {
     currentPage: Page;
-    onPageChange: (newPage: Page) => void;
+    onPageChange: () => void;
 }
 
 const NavLinks = ({ currentPage, onPageChange }: navProps) => {
@@ -14,7 +14,7 @@ const NavLinks = ({ currentPage, onPageChange }: navProps) => {
                 <Link
                     to="/"
                     className="nav__element__home"
-                    onClick={() => onPageChange(Page.home)}
+                    onClick={onPageChange}
                 >
                     Home
                     {currentPage === Page.home && (
@@ -26,7 +26,7 @@ const NavLinks = ({ currentPage, onPageChange }: navProps) => {
                 <Link
                     to="/about"
                     className="nav__element__about"
-                    onClick={() => onPageChange(Page.about)}
+                    onClick={onPageChange}
                 >
                     About
                     {currentPage === Page.about && (
@@ -38,7 +38,7 @@ const NavLinks = ({ currentPage, onPageChange }: navProps) => {
                 <Link
                     to="/projects"
                     className="nav__element__projects"
-                    onClick={() => onPageChange(Page.projects)}
+                    onClick={onPageChange}
                 >
                     Projects
                     {currentPage === Page.projects && (

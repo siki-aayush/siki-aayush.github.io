@@ -1,7 +1,9 @@
-import ProjectCard from "./ProjectCard";
-import axios from "axios";
+import { useEffect } from "react";
 import { useQuery } from "react-query";
-import { repository } from "../Interfaces";
+import axios from "axios";
+
+import ProjectCard from "./ProjectCard";
+import { repository, changePageState, Page } from "../Interfaces";
 
 const endpoint = "https://api.github.com/graphql";
 const KEY = "bearer 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";
@@ -25,7 +27,8 @@ const PROJECTS_QUERY = `
 }
 `;
 
-const Projects = () => {
+const Projects = ({ setCurrentPage }: changePageState) => {
+    useEffect(() => setCurrentPage(Page.projects), [setCurrentPage]);
     const { data, isLoading, error } = useQuery<repository[], Error>(
         "repos",
         async () => {

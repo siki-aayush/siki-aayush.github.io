@@ -1,6 +1,9 @@
+import { useEffect } from "react";
 import ProfileImg from "../images/about_img.jpg";
+import { Page, changePageState } from "../Interfaces";
 
-const About = () => {
+const About = ({ setCurrentPage }: changePageState) => {
+    useEffect(() => setCurrentPage(Page.about), [setCurrentPage]);
     return (
         <div className="about">
             <div className="about__img flex">

@@ -23,6 +23,7 @@ const insertIcon = (lang: string, color: string) => {
                     className="projectCard__lang__c"
                     color={color}
                     title={lang}
+                    key={lang}
                 />
             );
         case "shell":
@@ -32,6 +33,7 @@ const insertIcon = (lang: string, color: string) => {
                     className="projectCard__lang__shell"
                     color="#3178c6"
                     title={lang}
+                    key={lang}
                 />
             );
         case "typescript":
@@ -41,6 +43,7 @@ const insertIcon = (lang: string, color: string) => {
                     className="projectCard__lang__typescript"
                     color="#3178c6"
                     title={lang}
+                    key={lang}
                 />
             );
 
@@ -51,8 +54,10 @@ const insertIcon = (lang: string, color: string) => {
                     className="projectCard__lang__scss"
                     color="#cc6699"
                     title={lang}
+                    key={lang}
                 />
             );
+
         case "dockerfile":
             return (
                 <FaDocker
@@ -60,6 +65,7 @@ const insertIcon = (lang: string, color: string) => {
                     className="projectCard__lang__docker"
                     color="#0db7ed"
                     title={lang}
+                    key={lang}
                 />
             );
 
@@ -69,6 +75,7 @@ const insertIcon = (lang: string, color: string) => {
                     size="22px"
                     className="projectCard__lang__react"
                     color="#61DBFB"
+                    key={lang}
                 />
             );
 
@@ -78,6 +85,7 @@ const insertIcon = (lang: string, color: string) => {
                     size="22px"
                     className="projectCard__lang__react"
                     color="#f89820"
+                    key={lang}
                 />
             );
 
@@ -88,6 +96,7 @@ const insertIcon = (lang: string, color: string) => {
                     className="projectCard__lang__python"
                     color="#4B8BBE"
                     title={lang}
+                    key={lang}
                 />
             );
 
@@ -98,6 +107,7 @@ const insertIcon = (lang: string, color: string) => {
                     className="projectCard__lang__html"
                     color="#e34f26"
                     title={lang}
+                    key={lang}
                 />
             );
 
@@ -108,6 +118,7 @@ const insertIcon = (lang: string, color: string) => {
                     className="projectCard__lang__css"
                     color="#264de4 "
                     title={lang}
+                    key={lang}
                 />
             );
 
@@ -118,6 +129,7 @@ const insertIcon = (lang: string, color: string) => {
                     className="projectCard__lang__js"
                     color="#F0DB4F"
                     title={lang}
+                    key={lang}
                 />
             );
 
@@ -128,6 +140,7 @@ const insertIcon = (lang: string, color: string) => {
                     className="projectCard__lang__jupyter"
                     color="#F0DB4F"
                     title={lang}
+                    key={lang}
                 />
             );
 
@@ -136,8 +149,9 @@ const insertIcon = (lang: string, color: string) => {
                 <FaUserSecret
                     size="22px"
                     className="projectCard__lang__secret"
-                    title={lang}
                     color={color}
+                    title={lang}
+                    key={lang}
                 />
             );
     }

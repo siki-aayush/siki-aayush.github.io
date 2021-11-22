@@ -17,3 +17,7 @@ export interface repository {
         nodes: language[];
     };
 }
+
+export interface changePageState {
+    setCurrentPage: (page: Page) => void;
+}
