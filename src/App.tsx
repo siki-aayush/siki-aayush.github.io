@@ -15,10 +15,7 @@ function App() {
     return (
         <Router>
             <div className="app" style={{ height: "100vh" }}>
-                <Nav
-                    currentPage={currentPage}
-                    setCurrentPage={(page: Page) => setCurrentPage(page)}
-                />
+                <Nav currentPage={currentPage} />
                 <Route
                     path="/about"
                     render={(props) => (
@@ -42,7 +39,18 @@ function App() {
                         />
                     )}
                 />
-                <Route path="/" component={Home} exact />
+                <Route
+                    path="/"
+                    render={(props) => (
+                        <Home
+                            {...props}
+                            setCurrentPage={(page: Page) =>
+                                setCurrentPage(page)
+                            }
+                        />
+                    )}
+                    exact
+                />
             </div>
         </Router>
     );

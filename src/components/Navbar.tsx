@@ -6,10 +6,9 @@ import { IoMenu, IoClose } from "react-icons/io5";
 
 interface navProps {
     currentPage: Page;
-    setCurrentPage: (page: Page) => void;
 }
 
-const Nav = ({ currentPage, setCurrentPage }: navProps) => {
+const Nav = ({ currentPage }: navProps) => {
     const [menu, setMenu] = useState<Boolean>(false);
 
     // Animation time -> 100 ms higher than scss animation time

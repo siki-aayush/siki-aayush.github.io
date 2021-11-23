@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { FaLinkedinIn, FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
+import { changePageState, Page } from "../Interfaces";
 
-const Home = () => {
+const Home = ({ setCurrentPage }: changePageState) => {
+    useEffect(() => setCurrentPage(Page.home), [setCurrentPage]);
+
     return (
         <div className="home">
             <div className="home__intro">
