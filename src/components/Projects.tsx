@@ -35,7 +35,9 @@ const Projects = ({ setCurrentPage }: changePageState) => {
             return axios({
                 url: endpoint,
                 method: "POST",
-                headers: {},
+                headers: {
+                    Authorization: KEY,
+                },
                 data: {
                     query: PROJECTS_QUERY,
                 },
