@@ -4,6 +4,7 @@
 	font-family: 'Open Sans', sans-serif;
 	position: relative;
 	margin: auto;
+	z-index: 999;
 
 	// Left side cursive logo
 	&__left {
@@ -28,7 +29,8 @@
 			left: 0;
 			width: 100%;
 			height: 2px;
-			background: linear-gradient($gradient1, $gradient2, $gradient3);
+			//background: linear-gradient($gradient1, $gradient2, $gradient3);
+			background: $primary;
 			transition: all 300ms;
 		}
 
@@ -64,8 +66,9 @@
 			right: 0;
 			width: 100%;
 		}
+
 		.nav__element {
-			margin-bottom: 15px;
+			margin-bottom: 10px;
 		}
 
 		@include breakpoint-up(large) {

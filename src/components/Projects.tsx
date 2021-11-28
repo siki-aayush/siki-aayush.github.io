@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useQuery } from "react-query";
 import axios from "axios";
 
+import { SiReactos } from "react-icons/si";
+
 import ProjectCard from "./ProjectCard";
 import { repository, changePageState, Page } from "../Interfaces";
 
@@ -42,15 +44,14 @@ const Projects = ({ setCurrentPage }: changePageState) => {
                     query: PROJECTS_QUERY,
                 },
             }).then((response) => {
-                console.log("fetched");
                 return response.data.data.user.repositories.nodes;
             });
         }
     );
 
-    if (isLoading) return <div>isLoading</div>;
+    if (isLoading) return <SiReactos className="projects__spinner" />;
     if (error) return <div>{error.message}</div>;
-    console.log(data);
+    //return <SiReactos className="projects__spinner" />;
 
     //const fetchData = async () => {
     //    await axios({
