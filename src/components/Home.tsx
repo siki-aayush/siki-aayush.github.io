@@ -19,7 +19,7 @@ const Home = ({ setCurrentPage }: changePageState) => {
                     <span>{MAIL}</span>
                 </div>
                 <div className="home__left__location flex flex-ac">
-                    <IoLocationSharp className="home__left__location" />
+                    <IoLocationSharp className="home__left__location__icon" />
                     <span>{LOCATION}</span>
                 </div>
             </div>
