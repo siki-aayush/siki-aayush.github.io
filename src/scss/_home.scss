@@ -148,13 +148,13 @@
 
 	//icons hover
 	&__facebook {
-		svg:hover {
+		svg:hover path {
 			color: #3b5998;
 		}
 	}
 
 	&__github {
-		svg:hover {
+		svg:hover path {
 			color: $primary;
 		}
 	}

@@ -15,11 +15,8 @@ const ProjectCard = ({ repo }: projectCardProps) => {
             <div className="projectCard__title">{repo.name}</div>
             <div className="projectCard__desc">{repo.description}</div>
             <div className="projectCard__lang">
-                {
-                    //repo.languages.nodes.map(({ name, color }) =>
-                    //insertIcon(name.toLowerCase(), color))
-                    repo.languages.map((lang) => insertIcon(lang.toLowerCase()))
-                }
+                {repo.languages.map((lang) => insertIcon(lang.toLowerCase()))}
+                {repo.fork ? insertIcon("fork") : null}
             </div>
             <div className="projectCard__btn flex flex-ac">
                 <button

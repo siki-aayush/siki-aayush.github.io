@@ -18,9 +18,7 @@ export interface repository {
     languages: string[];
     has_pages: boolean;
     homepage: string;
-    //languages: {
-    //    nodes: language[];
-    //};
+    fork: boolean;
 }
 
 export interface changePageState {
