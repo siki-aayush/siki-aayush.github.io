@@ -57,6 +57,7 @@ const Projects = ({ setCurrentPage }: changePageState) => {
                         languages: lang,
                         has_pages: repo.has_pages,
                         homepage: repo.homepage,
+                        fork: repo.fork,
                     };
                 })
             );
@@ -100,7 +101,6 @@ const Projects = ({ setCurrentPage }: changePageState) => {
     //};
 
     return (
-        //<div></div>
         <div className="projects flex flex-c flex-ac">
             {data!.map((repo: repository, index: number) => (
                 <ProjectCard key={repo.name + index} repo={repo} />
