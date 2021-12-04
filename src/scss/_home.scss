@@ -74,7 +74,6 @@
 		@include breakpoint-up(large) {
 			height: 546px;
 			border: 0.5px solid black;
-			border: 0.5px solid $primary;
 			margin-left: 60px;
 			margin-right: 100px;
 		}
@@ -123,6 +122,7 @@
 						height: 20px;
 					}
 				}
+
 			}
 
 		}
@@ -143,6 +143,25 @@
 			}
 		}
 
+	}
+
+	//icons hover
+	&__facebook {
+		svg:hover {
+			color: #3b5998;
+		}
+	}
+
+	&__twitter {
+		svg:hover {
+			color:  #1da1f2;
+		}
+	}
+
+	&__linkedin {
+		svg:hover {
+			color: #0077b5;
+		}
 	}
 
 }

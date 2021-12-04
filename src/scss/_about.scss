@@ -50,7 +50,7 @@
 			padding: 15px 0;
 			font-family: 'Cormorant', serif;
 			font-size: 30px;
-			font-weight: $med;
+			font-weight: $regular;
 
 			@include breakpoint-up(large) {
 				font-size: 65px;
