@@ -1,7 +1,6 @@
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	margin: 0; padding: 0;
 }
 
 html {
@@ -10,12 +9,12 @@ html {
 }
 
 body {
-	font-size: 14px;
+	font-size: $small;
 	color: #000000;
 	//background-color: #efefef;
 
 	@include breakpoint-up(large) {
-		font-size: 16px;
+		font-size: $med;
 	}
 }
 

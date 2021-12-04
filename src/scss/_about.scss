@@ -5,11 +5,11 @@
 	margin-top: 20%;
 
 	@include breakpoint-up(large) {
-		margin-top: 80px;
 		flex-direction: row;
 		align-items: unset;
 		justify-content: center;
-		margin: 80px 20px 20px 0px;
+		margin-top: 110px;
+		//margin: 80px 20px 20px 0px;
 	}
 
 	&__img {
@@ -20,8 +20,7 @@
 		@include breakpoint-up(large) {
 			width: 445px;
 			height: 630px;
-			margin-top: 40px;
-			margin-right: 100px;
+			margin-right: 80px;
 		}
 
 		img {
@@ -47,23 +46,23 @@
 		}
 
 		&__heading {
-			padding: 15px 0;
+			padding: 0 0 15px 0;
 			font-family: 'Cormorant', serif;
 			font-size: 30px;
 			font-weight: $regular;
 
 			@include breakpoint-up(large) {
-				font-size: 65px;
-				padding-bottom: 25px;
+				font-size: $x-large;
+				padding-bottom: 20px;
 			}
 		}
 
 		&__p{
-			font-size: 12px;
+			font-size: $small;
 
 			@include breakpoint-up(large) {
 				max-width: 520px;
-				font-size: 16px;
+				font-size: $large;
 			}
 		}
 
