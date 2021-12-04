@@ -1,5 +1,8 @@
 import { useEffect } from "react";
-import { FaLinkedinIn, FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
+import { FiTwitter, FiGithub } from "react-icons/fi";
+import { BsLinkedin } from "react-icons/bs";
+
+import { ImFacebook } from "react-icons/im";
 import { HiMail } from "react-icons/hi";
 import { IoLocationSharp } from "react-icons/io5";
 import { changePageState, Page } from "../Interfaces";
@@ -30,17 +33,17 @@ const Home = ({ setCurrentPage }: changePageState) => {
                     Hey,<br></br>I'm Aayush musyaju
                 </div>
                 <div className="home__right__icons">
-                    <a href="/" className="home__facebook">
-                        <FaFacebookF className="icon_test" />
-                    </a>
                     <a href="/" className="home__github">
-                        <FaGithub className="icon_test" />
+                        <FiGithub className="icon_test" fill="#fff" />
                     </a>
                     <a href="/" className="home__twitter">
-                        <FaTwitter className="icon_test" />
+                        <FiTwitter className="icon_test" />
                     </a>
                     <a href="/" className="home__linkedin">
-                        <FaLinkedinIn className="icon_test" />
+                        <BsLinkedin className="icon_test" />
+                    </a>
+                    <a href="/" className="home__facebook">
+                        <ImFacebook className="icon_test" />
                     </a>
                 </div>
                 <div className="home__right__about">

@@ -5,14 +5,15 @@
 
 	@include breakpoint-up(large) {
 		flex-direction: row;
-		margin-top: 120px;
+		margin-top: 170px;
 	}
 
 	&__left {
 
 		@include breakpoint-up(large) {
-			padding-left: 200px;
-			margin-top: -55px;
+			padding-left: 250px;
+			//margin-left: auto;
+			//width: 715px;
 		}
 
 		// Profile image
@@ -33,7 +34,7 @@
 		}
 
 		&__mail, &__location{
-			font-size: 12px;
+			font-size: $small;
 
 			@include breakpoint-down(small) {
 				position: absolute;
@@ -72,10 +73,10 @@
 
 	&__separator {
 		@include breakpoint-up(large) {
-			height: 546px;
+			height: 460px;
 			border: 0.5px solid black;
 			margin-left: 60px;
-			margin-right: 100px;
+			margin-right: 80px;
 		}
 	}
 
@@ -84,7 +85,7 @@
 
 		//large
 		@include breakpoint-up(large) {
-			margin-top: -40px;
+			margin-top: 0;
 		}
 
 		// Intro title
@@ -94,7 +95,7 @@
 			text-align: center;
 
 			@include breakpoint-up(large) {
-				font-size: 55px;
+				font-size: $x-large;
 				text-align: left;
 			}
 		}
@@ -129,15 +130,15 @@
 
 		// About myself description
 		&__about {
-			font-size: 12px;
+			font-size: $small;
 			max-width: 90%;
 			margin: auto;
 			margin-top: 15px;
 			text-align: center;
 
 			@include breakpoint-up(large) {
-				font-size: 18px;
-				max-width: 715px;
+				font-size: $med;
+				max-width: 600px;
 				margin-top: 20px;
 				text-align: left;
 			}
@@ -149,6 +150,12 @@
 	&__facebook {
 		svg:hover {
 			color: #3b5998;
+		}
+	}
+
+	&__github {
+		svg:hover {
+			color: $primary;
 		}
 	}
 
