@@ -12,6 +12,7 @@ html {
 body {
 	font-size: 14px;
 	color: #000000;
+	//background-color: #efefef;
 
 	@include breakpoint-up(large) {
 		font-size: 16px;

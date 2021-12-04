@@ -1,5 +1,6 @@
 import { repository } from "../Interfaces";
 import insertIcon from "../programmingIcon";
+import { RiGitRepositoryLine, RiComputerLine } from "react-icons/ri";
 
 interface projectCardProps {
     repo: repository;
@@ -14,24 +15,25 @@ const ProjectCard = ({ repo }: projectCardProps) => {
             <div className="projectCard__title">{repo.name}</div>
             <div className="projectCard__desc">{repo.description}</div>
             <div className="projectCard__lang">
-                {repo.languages.nodes.map(({ name, color }) =>
-                    insertIcon(name.toLowerCase(), color)
-                )}
+                {
+                    //repo.languages.nodes.map(({ name, color }) =>
+                    //insertIcon(name.toLowerCase(), color))
+                    repo.languages.map((lang) => insertIcon(lang.toLowerCase()))
+                }
             </div>
             <div className="projectCard__btn flex flex-ac">
                 <button
-                    //onClick={repo.url}
                     className="projectCard__btn__repo flex flex-ac flex-c"
                     onClick={() => window.open(repo.url)}
                 >
-                    Repository
+                    <RiGitRepositoryLine /> Repository
                 </button>
                 <button
                     className="projectCard__btn__demo flex flex-ac flex-c "
-                    onClick={() => window.open(repo.url)}
-                    disabled
+                    onClick={() => window.open(repo.homepage)}
+                    disabled={!repo.has_pages}
                 >
-                    Demo Link
+                    <RiComputerLine /> Website
                 </button>
             </div>
         </div>

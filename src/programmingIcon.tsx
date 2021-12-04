@@ -13,7 +13,7 @@ import {
 
 import { SiJupyter, SiTypescript, SiC } from "react-icons/si";
 
-const insertIcon = (lang: string, color: string) => {
+const insertIcon = (lang: string) => {
     switch (lang) {
         case "c":
         case "objective-c":
@@ -21,7 +21,7 @@ const insertIcon = (lang: string, color: string) => {
                 <SiC
                     size="22px"
                     className="projectCard__lang__c"
-                    color={color}
+                    color="#5c32bd"
                     title={lang}
                     key={lang}
                 />
@@ -149,7 +149,7 @@ const insertIcon = (lang: string, color: string) => {
                 <FaUserSecret
                     size="22px"
                     className="projectCard__lang__secret"
-                    color={color}
+                    color="#5c32bd"
                     title={lang}
                     key={lang}
                 />
