@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { FiTwitter, FiGithub } from "react-icons/fi";
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 
 import { ImFacebook } from "react-icons/im";
 import { HiMail } from "react-icons/hi";
@@ -34,10 +34,16 @@ const Home = ({ setCurrentPage }: changePageState) => {
                 </div>
                 <div className="home__right__icons">
                     <a href="/" className="home__github">
-                        <FiGithub className="icon_test" fill="#fff" />
+                        <BsGithub className="icon_test" />
+                        {
+                            //<FiGithub className="icon_test" fill="#000000b8" />
+                        }
                     </a>
                     <a href="/" className="home__twitter">
-                        <FiTwitter className="icon_test" />
+                        <BsTwitter className="icon_test" />
+                        {
+                            //<FiTwitter className="icon_test" />
+                        }
                     </a>
                     <a href="/" className="home__linkedin">
                         <BsLinkedin className="icon_test" />
@@ -47,10 +53,16 @@ const Home = ({ setCurrentPage }: changePageState) => {
                     </a>
                 </div>
                 <div className="home__right__about">
-                    I'm a Product Designer and visual thinker passionate about
+                    I am a computer engineering undergraduate who is constantly
+                    eager to learn new things and develop solutions. I would
+                    love to develop products that will help people on thier
+                    daily life. I enjoy working on projects that are meaningful
+                    and impactful to the society. I am a huge fan of the anime
+                    and manga world.
+                    {/* I'm a Product Designer and visual thinker passionate about
                     humanizing tech experiences and creating thoughtful products
                     for community and well being. Best paired with this
-                    playlist.
+                    playlist. */}
                 </div>
             </div>
         </div>
