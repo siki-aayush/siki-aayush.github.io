@@ -1,17 +1,17 @@
 .home {
 	flex-direction: column;
-	margin-top: 20%;
+	margin-top: 15%;
 	position: relative;
 
 	@include breakpoint-up(large) {
 		flex-direction: row;
-		margin-top: 170px;
+		margin-top: 175px;
 	}
 
 	&__left {
 
 		@include breakpoint-up(large) {
-			padding-left: 250px;
+			padding-left: 240px;
 			//margin-left: auto;
 			//width: 715px;
 		}
@@ -76,7 +76,7 @@
 			height: 460px;
 			border: 0.5px solid black;
 			margin-left: 60px;
-			margin-right: 80px;
+			margin-right: 70px;
 		}
 	}
 
@@ -117,6 +117,7 @@
 				> svg {
 					width: 15px;
 					height: 15px;
+					color: $ic-bg;
 
 					@include breakpoint-up(large) {
 						width: 20px;

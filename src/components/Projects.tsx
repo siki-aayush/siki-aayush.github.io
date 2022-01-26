@@ -39,7 +39,7 @@ const Projects = ({ setCurrentPage }: changePageState) => {
                 method: "GET",
                 headers: {
                     Accept: "application/vnd.github.v3+json",
-                    Authorization: "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",
+                    //Authorization: ",
                 },
             }).then((resp) => resp.data);
 
