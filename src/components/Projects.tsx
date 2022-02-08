@@ -30,83 +30,80 @@ import { repository, changePageState, Page } from "../Interfaces";
 //`;
 
 const Projects = ({ setCurrentPage }: changePageState) => {
-    useEffect(() => setCurrentPage(Page.projects), [setCurrentPage]);
-    const { data, isLoading, error } = useQuery<repository[], Error>(
-        "repos",
-        async () => {
-            const all_data = await axios({
-                url: "https://api.github.com/users/siki-aayush/repos",
-                method: "GET",
-                headers: {
-                    Accept: "application/vnd.github.v3+json",
-                    //Authorization: ",
-                },
-            }).then((resp) => resp.data);
+  useEffect(() => setCurrentPage(Page.projects), [setCurrentPage]);
+  const { data, isLoading, error } = useQuery<repository[], Error>(
+    "repos",
+    async () => {
+      const all_data = await axios({
+        url: "https://api.github.com/users/siki-aayush/repos",
+        method: "GET",
+        headers: {
+          Accept: "application/vnd.github.v3+json",
+          //Authorization: ",
+        },
+      }).then((resp) => resp.data);
 
-            const process_data: repository[] = await Promise.all(
-                all_data.map(async (repo: any) => {
-                    const lang = await axios
-                        .get(repo.languages_url)
-                        .then((resp) => {
-                            return Object.keys(resp.data);
-                        });
-                    return {
-                        name: repo.name,
-                        description: repo.description,
-                        url: repo.html_url,
-                        languages: lang,
-                        has_pages: repo.has_pages,
-                        homepage: repo.homepage,
-                        fork: repo.fork,
-                    };
-                })
-            );
+      const process_data: repository[] = await Promise.all(
+        all_data.map(async (repo: any) => {
+          const lang = await axios.get(repo.languages_url).then((resp) => {
+            return Object.keys(resp.data);
+          });
+          return {
+            name: repo.name,
+            description: repo.description,
+            url: repo.html_url,
+            languages: lang,
+            has_pages: repo.has_pages,
+            homepage: repo.homepage,
+            fork: repo.fork,
+          };
+        })
+      );
 
-            console.log(process_data);
-            return process_data;
-            //return axios({
-            //    url: endpoint,
-            //    method: "POST",
-            //    headers: {
-            //        Authorization: KEY,
-            //    },
-            //    data: {
-            //        query: PROJECTS_QUERY,
-            //    },
-            //}).then((response) => {
-            //    console.log(response.data.data.user.repositories.nodes);
-            //    return response.data.data.user.repositories.nodes;
-            //});
-        }
-    );
+      return process_data;
+      //return axios({
+      //    url: endpoint,
+      //    method: "POST",
+      //    headers: {
+      //        Authorization: KEY,
+      //    },
+      //    data: {
+      //        query: PROJECTS_QUERY,
+      //    },
+      //}).then((response) => {
+      //    console.log(response.data.data.user.repositories.nodes);
+      //    return response.data.data.user.repositories.nodes;
+      //});
+    }
+  );
 
-    if (isLoading) return <SiReactos className="projects__spinner" />;
-    if (error) return <div>{error.message}</div>;
-    //return <SiReactos className="projects__spinner" />;
+  if (isLoading) return <SiReactos className="projects__spinner" />;
+  if (error) return <div>{error.message}</div>;
+  //return <SiReactos className="projects__spinner" />;
 
-    //const fetchData = async () => {
-    //    await axios({
-    //        url: endpoint,
-    //        method: "POST",
-    //        headers: {
-    //            Authorization: KEY,
-    //        },
-    //        data: {
-    //            query: PROJECTS_QUERY,
-    //        },
-    //    }).then((response) => {
-    //        setIsLoading(false);
-    //        setRepos(response.data.data.user.repositories.nodes);
-    //    });
-    //};
+  //const fetchData = async () => {
+  //    await axios({
+  //        url: endpoint,
+  //        method: "POST",
+  //        headers: {
+  //            Authorization: KEY,
+  //        },
+  //        data: {
+  //            query: PROJECTS_QUERY,
+  //        },
+  //    }).then((response) => {
+  //        setIsLoading(false);
+  //        setRepos(response.data.data.user.repositories.nodes);
+  //    });
+  //};
 
-    return (
-        <div className="projects flex flex-c flex-ac">
-            {data!.map((repo: repository, index: number) => (
-                <ProjectCard key={repo.name + index} repo={repo} />
-            ))}
-        </div>
-    );
+  return (
+    <div className="projects flex flex-c flex-ac">
+      {data!.map((repo: repository, index: number) => (
+        <ProjectCard key={repo.name + index} repo={repo} />
+      ))}
+    </div>
+  );
 };
 
 export default Projects;
