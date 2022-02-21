@@ -10,50 +10,44 @@ import Projects from "./components/Projects";
 import "./scss/style.scss";
 
 function App() {
-    const [currentPage, setCurrentPage] = useState<Page>(Page.home);
+  const [currentPage, setCurrentPage] = useState<Page>(Page.home);
 
-    return (
-        <Router>
-            <div className="app" style={{ height: "100vh" }}>
-                <Nav currentPage={currentPage} />
-                <Route
-                    path="/about"
-                    render={(props) => (
-                        <About
-                            {...props}
-                            setCurrentPage={(page: Page) =>
-                                setCurrentPage(page)
-                            }
-                        />
-                    )}
-                    //component={About}
-                />
-                <Route
-                    path="/projects"
-                    render={(props) => (
-                        <Projects
-                            {...props}
-                            setCurrentPage={(page: Page) =>
-                                setCurrentPage(page)
-                            }
-                        />
-                    )}
-                />
-                <Route
-                    path="/"
-                    render={(props) => (
-                        <Home
-                            {...props}
-                            setCurrentPage={(page: Page) =>
-                                setCurrentPage(page)
-                            }
-                        />
-                    )}
-                    exact
-                />
-            </div>
-        </Router>
-    );
+  return (
+    <Router>
+      <div className="app" style={{ height: "100vh" }}>
+        <Nav currentPage={currentPage} />
+        <Route
+          path="/about"
+          render={(props) => (
+            <About
+              {...props}
+              setCurrentPage={(page: Page) => setCurrentPage(page)}
+            />
+          )}
+          //component={About}
+        />
+        <Route
+          path="/projects"
+          render={(props) => (
+            <Projects
+              {...props}
+              setCurrentPage={(page: Page) => setCurrentPage(page)}
+            />
+          )}
+        />
+        <Route
+          path="/"
+          render={(props) => (
+            <Home
+              {...props}
+              setCurrentPage={(page: Page) => setCurrentPage(page)}
+            />
+          )}
+          exact
+        />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
