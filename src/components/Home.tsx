@@ -32,22 +32,28 @@ const Home = ({ setCurrentPage }: changePageState) => {
           Hey,<br></br>I'm Aayush musyaju
         </div>
         <div className="home__right__icons">
-          <a href="/" className="home__github">
+          <a href="https://github.com/siki-aayush" className="home__github">
             <BsGithub className="icon_test" />
             {
               //<FiGithub className="icon_test" fill="#000000b8" />
             }
           </a>
-          <a href="/" className="home__twitter">
+          <a href="https://twitter.com/SikiAayush" className="home__twitter">
             <BsTwitter className="icon_test" />
             {
               //<FiTwitter className="icon_test" />
             }
           </a>
-          <a href="/" className="home__linkedin">
+          <a
+            href="https://www.linkedin.com/in/aayush-musyaju-9a03311ab/"
+            className="home__linkedin"
+          >
             <BsLinkedin className="icon_test" />
           </a>
-          <a href="/" className="home__facebook">
+          <a
+            href="https://www.facebook.com/kaneki.kun.5895"
+            className="home__facebook"
+          >
             <ImFacebook className="icon_test" />
           </a>
         </div>
