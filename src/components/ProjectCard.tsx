@@ -28,7 +28,8 @@ const ProjectCard = ({ repo }: projectCardProps) => {
         <button
           className="projectCard__btn__demo flex flex-ac flex-c "
           onClick={() => window.open(repo.homepage)}
-          disabled={!repo.has_pages}
+          //disabled={!repo.has_pages}
+          disabled={!repo.homepage}
         >
           <RiComputerLine /> Website
         </button>
