@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import { Page } from "./Interfaces";
 import Nav from "./components/Navbar";
@@ -45,6 +45,12 @@ function App() {
           )}
           exact
         />
+		<Route
+			path="*"
+			render={(props) => (
+				<Redirect to="/" />
+			)}
+		/>
       </div>
     </Router>
   );
