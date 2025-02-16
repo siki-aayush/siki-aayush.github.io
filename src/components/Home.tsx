@@ -51,7 +51,7 @@ const Home = ({ setCurrentPage }: changePageState) => {
             <BsLinkedin className="icon_test" />
           </a>
           <a
-            href="https://www.facebook.com/kaneki.kun.5895"
+            href="https://www.facebook.com/sikiaayush"
             className="home__facebook"
           >
             <ImFacebook className="icon_test" />

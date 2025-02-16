@@ -13,9 +13,11 @@ function App() {
   const [currentPage, setCurrentPage] = useState<Page>(Page.home);
 
   return (
+    /* @ts-expect-error */
     <Router>
       <div className="app" style={{ height: "100vh" }}>
         <Nav currentPage={currentPage} />
+        {/* @ts-expect-error */}
         <Route
           path="/about"
           render={(props) => (
@@ -26,6 +28,7 @@ function App() {
           )}
           //component={About}
         />
+        {/* @ts-expect-error */}
         <Route
           path="/projects"
           render={(props) => (
@@ -35,6 +38,7 @@ function App() {
             />
           )}
         />
+        {/* @ts-expect-error */}
         <Route
           path="/"
           render={(props) => (
@@ -45,12 +49,8 @@ function App() {
           )}
           exact
         />
-		<Route
-			path="*"
-			render={(props) => (
-				<Redirect to="/" />
-			)}
-		/>
+        {/* @ts-expect-error */}
+        <Route path="*" render={(props) => <Redirect to="/" />} />
       </div>
     </Router>
   );
